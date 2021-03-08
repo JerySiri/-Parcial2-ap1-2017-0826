@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Parcial2_ap1_2017_0826.Entidades
 {
-    class TipoTarea
+    public class TipoTarea
     {
         [Key]
         public int TareaId { get; set; }
