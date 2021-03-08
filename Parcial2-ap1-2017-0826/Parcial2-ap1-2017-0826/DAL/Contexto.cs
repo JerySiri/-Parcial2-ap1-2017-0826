@@ -6,9 +6,9 @@ using Parcial2_ap1_2017_0826.Entidades;
 
 namespace Parcial2_ap1_2017_0826.DAL
 {
-    public class Contexto : DbContext
+    class Contexto : DbContext
     {
-        public DbSet<TipoTarea> TipoTarea { get; set; }
+        public DbSet<TiposTarea> TiposTarea { get; set; }
         public DbSet<ProyectosDetalle> ProyectosDetalle { get; set; }
         public DbSet<Proyectos> Proyectos { get; set; }
 
@@ -20,12 +20,12 @@ namespace Parcial2_ap1_2017_0826.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<TipoTarea>().HasData(
+            modelBuilder.Entity<TiposTarea>().HasData(
                 
-                new TipoTarea() { TareaId = 1, Nombre = "Analisis" },
-                new TipoTarea() { TareaId = 2, Nombre = "Diseño" },
-                new TipoTarea() { TareaId = 3, Nombre = "Programación" },
-                new TipoTarea() { TareaId = 4, Nombre = "Prueba" }
+                new TiposTarea() { TareaId = 1, Nombre = "Analisis" },
+                new TiposTarea() { TareaId = 2, Nombre = "Diseño" },
+                new TiposTarea() { TareaId = 3, Nombre = "Programación" },
+                new TiposTarea() { TareaId = 4, Nombre = "Prueba" }
 
            );
         }
