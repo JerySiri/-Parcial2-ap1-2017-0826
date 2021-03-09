@@ -139,7 +139,8 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
 
             if (!Validar)
                 return;
-            AccessibleRole = LLenarClase;
+
+            proyectos = LLenarClase;
 
             bool paso = ProyectosBLL.Guardar(proyectos);
 
@@ -151,6 +152,22 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             else
             {
                 MessageBox.Show("Transsaccion fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+            if (!Validar())
+                return;
+
+            if (ProyectosBLL.Eliminar((int)ProyectoIdNumericUpDown.Value))
+            {
+                Limpiar();
+                MessageBox.Show("Eliminacion de usuario exitosa!.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Eliminacion de usuario fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
