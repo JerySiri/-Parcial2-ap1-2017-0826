@@ -35,15 +35,15 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.DescripcionLabel = new System.Windows.Forms.Label();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
             this.ProyectoDetalleGroupBox = new System.Windows.Forms.GroupBox();
-            this.TipoTareaLabel = new System.Windows.Forms.Label();
-            this.TipoTareaComboBox = new System.Windows.Forms.ComboBox();
-            this.RequerimientoLabel = new System.Windows.Forms.Label();
-            this.RequerimientoTextBox = new System.Windows.Forms.TextBox();
-            this.TiempoLabel = new System.Windows.Forms.Label();
-            this.TiempoTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.AgregarButton = new System.Windows.Forms.Button();
             this.RemoverButton = new System.Windows.Forms.Button();
+            this.AgregarButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TiempoTextBox = new System.Windows.Forms.TextBox();
+            this.TiempoLabel = new System.Windows.Forms.Label();
+            this.RequerimientoTextBox = new System.Windows.Forms.TextBox();
+            this.RequerimientoLabel = new System.Windows.Forms.Label();
+            this.TipoTareaComboBox = new System.Windows.Forms.ComboBox();
+            this.TipoTareaLabel = new System.Windows.Forms.Label();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
@@ -117,54 +117,23 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.ProyectoDetalleGroupBox.TabStop = false;
             this.ProyectoDetalleGroupBox.Text = "Detalles De La Tarea A Realizar";
             // 
-            // TipoTareaLabel
+            // RemoverButton
             // 
-            this.TipoTareaLabel.AutoSize = true;
-            this.TipoTareaLabel.Location = new System.Drawing.Point(5, 23);
-            this.TipoTareaLabel.Name = "TipoTareaLabel";
-            this.TipoTareaLabel.Size = new System.Drawing.Size(77, 15);
-            this.TipoTareaLabel.TabIndex = 0;
-            this.TipoTareaLabel.Text = "Tipo De Tarea";
+            this.RemoverButton.Location = new System.Drawing.Point(6, 228);
+            this.RemoverButton.Name = "RemoverButton";
+            this.RemoverButton.Size = new System.Drawing.Size(101, 23);
+            this.RemoverButton.TabIndex = 8;
+            this.RemoverButton.Text = "Eliminar";
+            this.RemoverButton.UseVisualStyleBackColor = true;
             // 
-            // TipoTareaComboBox
+            // AgregarButton
             // 
-            this.TipoTareaComboBox.FormattingEnabled = true;
-            this.TipoTareaComboBox.Location = new System.Drawing.Point(7, 43);
-            this.TipoTareaComboBox.Name = "TipoTareaComboBox";
-            this.TipoTareaComboBox.Size = new System.Drawing.Size(125, 23);
-            this.TipoTareaComboBox.TabIndex = 1;
-            // 
-            // RequerimientoLabel
-            // 
-            this.RequerimientoLabel.AutoSize = true;
-            this.RequerimientoLabel.Location = new System.Drawing.Point(136, 23);
-            this.RequerimientoLabel.Name = "RequerimientoLabel";
-            this.RequerimientoLabel.Size = new System.Drawing.Size(152, 15);
-            this.RequerimientoLabel.TabIndex = 2;
-            this.RequerimientoLabel.Text = "Requerimiento De La Tareas";
-            // 
-            // RequerimientoTextBox
-            // 
-            this.RequerimientoTextBox.Location = new System.Drawing.Point(138, 44);
-            this.RequerimientoTextBox.Name = "RequerimientoTextBox";
-            this.RequerimientoTextBox.Size = new System.Drawing.Size(225, 23);
-            this.RequerimientoTextBox.TabIndex = 3;
-            // 
-            // TiempoLabel
-            // 
-            this.TiempoLabel.AutoSize = true;
-            this.TiempoLabel.Location = new System.Drawing.Point(367, 23);
-            this.TiempoLabel.Name = "TiempoLabel";
-            this.TiempoLabel.Size = new System.Drawing.Size(102, 15);
-            this.TiempoLabel.TabIndex = 4;
-            this.TiempoLabel.Text = "Tiempo (Minutos)";
-            // 
-            // TiempoTextBox
-            // 
-            this.TiempoTextBox.Location = new System.Drawing.Point(369, 43);
-            this.TiempoTextBox.Name = "TiempoTextBox";
-            this.TiempoTextBox.Size = new System.Drawing.Size(125, 23);
-            this.TiempoTextBox.TabIndex = 5;
+            this.AgregarButton.Location = new System.Drawing.Point(500, 42);
+            this.AgregarButton.Name = "AgregarButton";
+            this.AgregarButton.Size = new System.Drawing.Size(101, 23);
+            this.AgregarButton.TabIndex = 7;
+            this.AgregarButton.Text = "Agregar";
+            this.AgregarButton.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -179,23 +148,54 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.dataGridView1.Size = new System.Drawing.Size(598, 150);
             this.dataGridView1.TabIndex = 6;
             // 
-            // AgregarButton
+            // TiempoTextBox
             // 
-            this.AgregarButton.Location = new System.Drawing.Point(500, 42);
-            this.AgregarButton.Name = "AgregarButton";
-            this.AgregarButton.Size = new System.Drawing.Size(101, 23);
-            this.AgregarButton.TabIndex = 7;
-            this.AgregarButton.Text = "Agregar";
-            this.AgregarButton.UseVisualStyleBackColor = true;
+            this.TiempoTextBox.Location = new System.Drawing.Point(369, 43);
+            this.TiempoTextBox.Name = "TiempoTextBox";
+            this.TiempoTextBox.Size = new System.Drawing.Size(125, 23);
+            this.TiempoTextBox.TabIndex = 5;
             // 
-            // RemoverButton
+            // TiempoLabel
             // 
-            this.RemoverButton.Location = new System.Drawing.Point(6, 228);
-            this.RemoverButton.Name = "RemoverButton";
-            this.RemoverButton.Size = new System.Drawing.Size(101, 23);
-            this.RemoverButton.TabIndex = 8;
-            this.RemoverButton.Text = "Eliminar";
-            this.RemoverButton.UseVisualStyleBackColor = true;
+            this.TiempoLabel.AutoSize = true;
+            this.TiempoLabel.Location = new System.Drawing.Point(367, 23);
+            this.TiempoLabel.Name = "TiempoLabel";
+            this.TiempoLabel.Size = new System.Drawing.Size(102, 15);
+            this.TiempoLabel.TabIndex = 4;
+            this.TiempoLabel.Text = "Tiempo (Minutos)";
+            // 
+            // RequerimientoTextBox
+            // 
+            this.RequerimientoTextBox.Location = new System.Drawing.Point(138, 44);
+            this.RequerimientoTextBox.Name = "RequerimientoTextBox";
+            this.RequerimientoTextBox.Size = new System.Drawing.Size(225, 23);
+            this.RequerimientoTextBox.TabIndex = 3;
+            // 
+            // RequerimientoLabel
+            // 
+            this.RequerimientoLabel.AutoSize = true;
+            this.RequerimientoLabel.Location = new System.Drawing.Point(136, 23);
+            this.RequerimientoLabel.Name = "RequerimientoLabel";
+            this.RequerimientoLabel.Size = new System.Drawing.Size(152, 15);
+            this.RequerimientoLabel.TabIndex = 2;
+            this.RequerimientoLabel.Text = "Requerimiento De La Tareas";
+            // 
+            // TipoTareaComboBox
+            // 
+            this.TipoTareaComboBox.FormattingEnabled = true;
+            this.TipoTareaComboBox.Location = new System.Drawing.Point(7, 43);
+            this.TipoTareaComboBox.Name = "TipoTareaComboBox";
+            this.TipoTareaComboBox.Size = new System.Drawing.Size(125, 23);
+            this.TipoTareaComboBox.TabIndex = 1;
+            // 
+            // TipoTareaLabel
+            // 
+            this.TipoTareaLabel.AutoSize = true;
+            this.TipoTareaLabel.Location = new System.Drawing.Point(5, 23);
+            this.TipoTareaLabel.Name = "TipoTareaLabel";
+            this.TipoTareaLabel.Size = new System.Drawing.Size(77, 15);
+            this.TipoTareaLabel.TabIndex = 0;
+            this.TipoTareaLabel.Text = "Tipo De Tarea";
             // 
             // NuevoButton
             // 
@@ -226,6 +226,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // TiempoTotalTextBox
             // 
+            this.TiempoTotalTextBox.Enabled = false;
             this.TiempoTotalTextBox.Location = new System.Drawing.Point(496, 471);
             this.TiempoTotalTextBox.Name = "TiempoTotalTextBox";
             this.TiempoTotalTextBox.Size = new System.Drawing.Size(128, 23);
