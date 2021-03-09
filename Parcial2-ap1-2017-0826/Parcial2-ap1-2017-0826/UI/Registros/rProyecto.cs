@@ -52,7 +52,6 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
 
             if (paso)
             {
-                Limpiar();
                 MessageBox.Show("Transsaccion exitosa!.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -148,8 +147,9 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             ProyectoIdNumericUpDown.Value = proyectos.ProyectoId;
             FechaDateTimePicker.Value = proyectos.Fecha;
             DescripcionTextBox.Text = proyectos.Descripcion;
-            TiempoTotalTextBox.Text = LLenarTiempoTotal().ToString();
+
             this.Detalle = proyectos.ProyectoDetalle;
+            TiempoTotalTextBox.Text = LLenarTiempoTotal().ToString();
         }
         private bool ValidarAgregar()
         {
