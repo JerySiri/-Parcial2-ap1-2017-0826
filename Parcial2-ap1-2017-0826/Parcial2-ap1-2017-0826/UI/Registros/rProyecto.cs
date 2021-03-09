@@ -41,6 +41,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             ProyectoDetalleDataGridView.DataSource = null;
             ProyectoDetalleDataGridView.DataSource = this.Detalle;
         }
+
         
     }
 }
