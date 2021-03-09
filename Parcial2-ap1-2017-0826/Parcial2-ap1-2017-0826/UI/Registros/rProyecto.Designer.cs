@@ -29,6 +29,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ProyectoIdLabel = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FechaLabel = new System.Windows.Forms.Label();
@@ -51,9 +52,11 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.TiempoTotalLabel = new System.Windows.Forms.Label();
             this.ProyectoIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.BuscarButton = new System.Windows.Forms.Button();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.ProyectoDetalleGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // ProyectoIdLabel
@@ -257,6 +260,10 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.UseVisualStyleBackColor = true;
             // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
+            // 
             // ProyectoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -281,6 +288,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.ProyectoDetalleGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,5 +318,6 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
         private System.Windows.Forms.Label TiempoTotalLabel;
         private System.Windows.Forms.NumericUpDown ProyectoIdNumericUpDown;
         private System.Windows.Forms.Button BuscarButton;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }

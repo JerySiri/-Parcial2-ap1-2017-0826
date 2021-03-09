@@ -62,5 +62,43 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
 
             this.Detalle = proyectos.ProyectoDetalle;
         }
+
+        private bool Validar()
+        {
+            bool paso = true;
+
+            MyErrorProvider.Clear();
+
+            if (String.IsNullOrWhiteSpace(DescripcionTextBox.Text))
+            {
+                MyErrorProvider.SetError(DescripcionTextBox, "El campo No puede estar vacio");
+                DescripcionTextBox.Focus();
+                paso = false;
+            }
+
+            if (String.IsNullOrWhiteSpace(RequerimientoTextBox.Text))
+            {
+                MyErrorProvider.SetError(RequerimientoTextBox, "El campo No puede estar vacio");
+                RequerimientoTextBox.Focus();
+                paso = false;
+            }
+
+            if (String.IsNullOrWhiteSpace(TiempoTextBox.Text))
+            {
+                MyErrorProvider.SetError(TiempoTextBox, "El campo No puede estar vacio");
+                TiempoTextBox.Focus();
+                paso = false;
+            }
+
+            if (ProyectoIdNumericUpDown.Value == 0)
+            {
+                MyErrorProvider.SetError(ProyectoIdNumericUpDown, "El campo id No puede estar con valor 0");
+                ProyectoIdNumericUpDown.Focus();
+                paso = false;
+            }
+
+            return paso;
+        }
+
     }
 }
