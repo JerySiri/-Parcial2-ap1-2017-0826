@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Parcial2_ap1_2017_0826</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <Folder Include="DATA\" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
