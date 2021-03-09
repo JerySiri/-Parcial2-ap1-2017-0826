@@ -42,6 +42,25 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             ProyectoDetalleDataGridView.DataSource = this.Detalle;
         }
 
-        
+        private Proyectos LLenarClase()
+        {
+            Proyectos proyectos = new Proyectos();
+            proyectos.ProyectoId = (int) ProyectoIdNumericUpDown.Value;
+            proyectos.Fecha = FechaDateTimePicker.Value;
+            proyectos.Descripcion = DescripcionTextBox.Text;
+
+            proyectos.ProyectoDetalle = this.Detalle;
+
+            return proyectos;
+        }
+
+        private void LlenarCampos(Proyectos proyectos)
+        {
+            ProyectoIdNumericUpDown.Value = proyectos.ProyectoId;
+            FechaDateTimePicker.Value = proyectos.Fecha;
+            DescripcionTextBox.Text = proyectos.Descripcion;
+
+            this.Detalle = proyectos.ProyectoDetalle;
+        }
     }
 }
