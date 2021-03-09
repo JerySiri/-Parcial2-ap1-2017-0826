@@ -150,6 +150,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.ProyectoDetalleDataGridView.RowTemplate.Height = 25;
             this.ProyectoDetalleDataGridView.Size = new System.Drawing.Size(598, 150);
             this.ProyectoDetalleDataGridView.TabIndex = 6;
+            this.ProyectoDetalleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProyectoDetalleDataGridView_CellContentClick);
             // 
             // TiempoTextBox
             // 

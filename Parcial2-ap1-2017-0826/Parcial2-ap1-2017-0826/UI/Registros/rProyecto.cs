@@ -100,5 +100,11 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             return paso;
         }
 
+        private void ProyectoDetalleDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TipoTareaComboBox.DataSource = TiposTareaBLL.GetTiposTarea();
+            TipoTareaComboBox.DisplayMember = "Nombre";
+            TipoTareaComboBox.ValueMember = "TareaId";
+        }
     }
 }
