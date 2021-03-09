@@ -58,6 +58,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             {
                 MessageBox.Show("Transsaccion fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            CargarGrid();
         }
 
         private void EliminarButton_Click(object sender, EventArgs e)
@@ -171,7 +172,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
                 paso = false;
             }
 
-            if (Utilidades.esToInt(TiempoTextBox.Text))
+            if (!Utilidades.esToInt(TiempoTextBox.Text))
             {
                 MyErrorProvider.SetError(TiempoTextBox, "El campo debe ser numerico");
                 TiempoTextBox.Focus();
