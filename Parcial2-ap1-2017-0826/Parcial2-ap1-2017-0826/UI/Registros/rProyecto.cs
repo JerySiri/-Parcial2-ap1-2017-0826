@@ -127,5 +127,31 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             else
                 MessageBox.Show("Usuario No existe.", "Fallo", MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
+
+        private void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void GuardarButton_Click(object sender, EventArgs e)
+        {
+            Proyectos proyectos;
+
+            if (!Validar)
+                return;
+            AccessibleRole = LLenarClase;
+
+            bool paso = ProyectosBLL.Guardar(proyectos);
+
+            if (paso)
+            {
+                Limpiar();
+                MessageBox.Show("Transsaccion exitosa!.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Transsaccion fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

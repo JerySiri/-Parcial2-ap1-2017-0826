@@ -218,6 +218,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // EliminarButton
             // 
@@ -242,6 +243,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.GuardarButton.Text = "Buscar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // TiempoTotalTextBox
             // 
