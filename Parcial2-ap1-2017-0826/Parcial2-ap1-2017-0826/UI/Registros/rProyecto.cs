@@ -222,10 +222,5 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
                 CargarGrid();
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button1.Text = LLenarTiempoTotal().ToString();
-        }
     }
 }

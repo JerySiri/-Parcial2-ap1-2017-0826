@@ -298,7 +298,6 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.button1.TabIndex = 14;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ProyectoForm
             // 
