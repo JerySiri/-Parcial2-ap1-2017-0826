@@ -243,7 +243,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 52);
             this.GuardarButton.TabIndex = 9;
-            this.GuardarButton.Text = "Buscar";
+            this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.GuardarButton.UseVisualStyleBackColor = true;
             this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);

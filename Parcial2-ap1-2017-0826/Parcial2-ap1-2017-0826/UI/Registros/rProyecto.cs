@@ -62,19 +62,11 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
 
             this.Detalle = proyectos.ProyectoDetalle;
         }
-
-        private bool Validar()
+        private bool ValidarAgregar()
         {
             bool paso = true;
 
             MyErrorProvider.Clear();
-
-            if (String.IsNullOrWhiteSpace(DescripcionTextBox.Text))
-            {
-                MyErrorProvider.SetError(DescripcionTextBox, "El campo No puede estar vacio");
-                DescripcionTextBox.Focus();
-                paso = false;
-            }
 
             if (String.IsNullOrWhiteSpace(RequerimientoTextBox.Text))
             {
@@ -87,6 +79,22 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             {
                 MyErrorProvider.SetError(TiempoTextBox, "El campo No puede estar vacio");
                 TiempoTextBox.Focus();
+                paso = false;
+            }
+            
+            return paso;
+        }
+
+        private bool Validar()
+        {
+            bool paso = true;
+
+            MyErrorProvider.Clear();
+
+            if (String.IsNullOrWhiteSpace(DescripcionTextBox.Text))
+            {
+                MyErrorProvider.SetError(DescripcionTextBox, "El campo No puede estar vacio");
+                DescripcionTextBox.Focus();
                 paso = false;
             }
 
@@ -108,13 +116,15 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             return paso;
         }
 
+
+
         private void ProyectoForm_Load(object sender, EventArgs e)
         {
             TipoTareaComboBox.DataSource = TiposTareaBLL.GetTiposTarea();
             TipoTareaComboBox.DisplayMember = "Nombre";
             TipoTareaComboBox.ValueMember = "TareaId";
         }
-
+        
         private void BuscarButton_Click(object sender, EventArgs e)
         {
             Proyectos proyectos = ProyectosBLL.Buscar((int)ProyectoIdNumericUpDown.Value);
@@ -127,20 +137,20 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             else
                 MessageBox.Show("Usuario No existe.", "Fallo", MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
-
+        
         private void NuevoButton_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
-
+        
         private void GuardarButton_Click(object sender, EventArgs e)
         {
             Proyectos proyectos;
 
-            if (!Validar)
+            if (!Validar())
                 return;
 
-            proyectos = LLenarClase;
+            proyectos = LLenarClase();
 
             bool paso = ProyectosBLL.Guardar(proyectos);
 
@@ -168,10 +178,13 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
                 MessageBox.Show("Eliminacion de usuario fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        
         private void AgregarButton_Click(object sender, EventArgs e)
         {
-            if (ProyectoDetalleDataGridView.DataSource != Null)
+            if (! ValidarAgregar())
+                return;
+
+            if (ProyectoDetalleDataGridView.DataSource != null)
                 this.Detalle = (List<ProyectosDetalle>)ProyectoDetalleDataGridView.DataSource;
 
             this.Detalle.Add(new ProyectosDetalle
@@ -180,15 +193,15 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
                     proyectoId: (int)ProyectoIdNumericUpDown.Value,
                     tipoTareaId: (int)TipoTareaComboBox.SelectedIndex + 1,
                     descripcion: RequerimientoTextBox.Text,
-                    TiempoTextBox: TiempoTextBox.Text
+                    minutos: Convert.ToInt32(TiempoTextBox.Text)
                 )
-           );
+           ) ;
             CargarGrid();
         }
-
+        
         private void RemoverButton_Click(object sender, EventArgs e)
         {
-            if (ProyectoDetalleDataGridView.Rows.Count > 0 || ProyectoDetalleDataGridView.CurrentRow != Null)
+            if (ProyectoDetalleDataGridView.Rows.Count > 0 || ProyectoDetalleDataGridView.CurrentRow != null)
             {
                 Detalle.RemoveAt(ProyectoDetalleDataGridView.CurrentRow.Index);
                 CargarGrid();

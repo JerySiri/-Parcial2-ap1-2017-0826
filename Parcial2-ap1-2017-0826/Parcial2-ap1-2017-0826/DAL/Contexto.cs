@@ -6,7 +6,7 @@ using Parcial2_ap1_2017_0826.Entidades;
 
 namespace Parcial2_ap1_2017_0826.DAL
 {
-    class Contexto : DbContext
+    public class Contexto : DbContext
     {
         public DbSet<TiposTarea> TiposTarea { get; set; }
         public DbSet<ProyectosDetalle> ProyectosDetalle { get; set; }

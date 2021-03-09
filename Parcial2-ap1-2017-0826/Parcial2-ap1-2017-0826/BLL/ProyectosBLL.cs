@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 
 namespace Parcial2_ap1_2017_0826.BLL
 {
-    class ProyectosBLL
+    public class ProyectosBLL
     {
         public static bool Guardar(Proyectos proyecto)
         {
@@ -93,20 +93,26 @@ namespace Parcial2_ap1_2017_0826.BLL
         {
             bool paso = false;
             Contexto contexto = new Contexto();
+            
+            if (Existe(id))
+            {
+                try
+                {
+                    var eliminar = contexto.Proyectos.Find(id);
+                    contexto.Entry(eliminar).State = EntityState.Deleted;
 
-            try
-            {
-                var eliminar = contexto.Proyectos.Find(id);
-                contexto.Entry(eliminar).State = EntityState.Deleted;
+                    paso = (contexto.SaveChanges() > 0);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    contexto.Dispose();
+                }
             }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
+           
             return paso;
         }
 

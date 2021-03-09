@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Parcial2_ap1_2017_0826.BLL
 {
-    class TiposTareaBLL
+    public class TiposTareaBLL
     {
         public static List<TiposTarea> GetTiposTarea()
         {
