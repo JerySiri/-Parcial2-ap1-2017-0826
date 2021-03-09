@@ -97,6 +97,14 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
                 paso = false;
             }
 
+            if (this.Detalle.Count == 0)
+            {
+                MyErrorProvider.SetError(ProyectoDetalleGroupBox, "Debe agregar una tarea a realizar");
+                ProyectoDetalleGroupBox.Focus();
+                paso = false;
+            }
+
+
             return paso;
         }
 
@@ -105,6 +113,19 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             TipoTareaComboBox.DataSource = TiposTareaBLL.GetTiposTarea();
             TipoTareaComboBox.DisplayMember = "Nombre";
             TipoTareaComboBox.ValueMember = "TareaId";
+        }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            Proyectos proyectos = ProyectosBLL.Buscar((int)ProyectoIdNumericUpDown.Value);
+
+            if (proyectos != null)
+            {
+                LlenarCampos(proyectos);
+                CargarGrid();
+            }
+            else
+                MessageBox.Show("Usuario No existe.", "Fallo", MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
     }
 }
