@@ -31,6 +31,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             TipoTareaComboBox.SelectedIndex = 0;
             RequerimientoTextBox.Clear();
             TiempoTextBox.Clear();
+            TiempoTotalTextBox.Clear();
 
             this.Detalle = new List<ProyectosDetalle>();
             CargarGrid();
@@ -116,7 +117,17 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             return paso;
         }
 
+        private int LLenarTiempoTotal()
+        {
+            int tiempoTotal = 0;
 
+            foreach (var dato in Detalle)
+            {
+                tiempoTotal += dato.Minutos;
+            }
+            return tiempoTotal;
+
+        }
 
         private void ProyectoForm_Load(object sender, EventArgs e)
         {
@@ -196,6 +207,9 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
                     minutos: Convert.ToInt32(TiempoTextBox.Text)
                 )
            ) ;
+
+            TiempoTotalTextBox.Text = LLenarTiempoTotal().ToString() ;
+
             CargarGrid();
         }
         
@@ -204,8 +218,14 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             if (ProyectoDetalleDataGridView.Rows.Count > 0 || ProyectoDetalleDataGridView.CurrentRow != null)
             {
                 Detalle.RemoveAt(ProyectoDetalleDataGridView.CurrentRow.Index);
+                TiempoTotalTextBox.Text =LLenarTiempoTotal().ToString();
                 CargarGrid();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.Text = LLenarTiempoTotal().ToString();
         }
     }
 }

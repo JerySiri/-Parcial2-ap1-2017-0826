@@ -54,6 +54,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.ProyectoIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.ProyectoDetalleGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).BeginInit();
@@ -289,11 +290,22 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(406, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ProyectoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(633, 538);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.ProyectoIdNumericUpDown);
             this.Controls.Add(this.TiempoTotalLabel);
@@ -348,5 +360,6 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
         private System.Windows.Forms.NumericUpDown ProyectoIdNumericUpDown;
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.Button button1;
     }
 }
