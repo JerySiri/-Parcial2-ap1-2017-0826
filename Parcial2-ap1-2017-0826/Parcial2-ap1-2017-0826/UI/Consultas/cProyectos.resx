@@ -57,4 +57,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="BucarButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAD0SURBVDhPndG/KwZxHMDxI0okEauSkkkmg4XFYBGDlESK
+        FOXXYvJjUwZK2ZUyyKiklJHyB1iMBlllUnh97u4pg3t4vOvV8/1e3efue0+S184ys0wzwwh/qpUN1jjn
+        lBgSQxf5tSXiyT1U0cYmV3QwTtkWqCFu/t4Ee8ynuzJt57+DxLo+3WUdMpctizthNFsmQ+zTlO6SpI+V
+        bFncJXHTJLVxIS+OtMo6dXGhqE5euGaHKeJvjA95wxNb9FNYF7d88s4r9+xyxxsfHNDAj8UrdzNML9VE
+        zZwRw8MjA1TcGM+UBh3RSEW1cExpyAP/Ko7pKMnFF82JLPDX3i+QAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
