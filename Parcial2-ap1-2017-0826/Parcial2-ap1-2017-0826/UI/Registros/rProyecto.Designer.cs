@@ -30,6 +30,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProyectoForm));
             this.ProyectoIdLabel = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FechaLabel = new System.Windows.Forms.Label();
@@ -122,20 +123,26 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // RemoverButton
             // 
+            this.RemoverButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoverButton.Image")));
+            this.RemoverButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RemoverButton.Location = new System.Drawing.Point(6, 228);
             this.RemoverButton.Name = "RemoverButton";
-            this.RemoverButton.Size = new System.Drawing.Size(101, 23);
+            this.RemoverButton.Size = new System.Drawing.Size(77, 23);
             this.RemoverButton.TabIndex = 8;
             this.RemoverButton.Text = "Eliminar";
+            this.RemoverButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.RemoverButton.UseVisualStyleBackColor = true;
             // 
             // AgregarButton
             // 
-            this.AgregarButton.Location = new System.Drawing.Point(500, 42);
+            this.AgregarButton.Image = ((System.Drawing.Image)(resources.GetObject("AgregarButton.Image")));
+            this.AgregarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AgregarButton.Location = new System.Drawing.Point(524, 42);
             this.AgregarButton.Name = "AgregarButton";
-            this.AgregarButton.Size = new System.Drawing.Size(101, 23);
+            this.AgregarButton.Size = new System.Drawing.Size(77, 23);
             this.AgregarButton.TabIndex = 7;
             this.AgregarButton.Text = "Agregar";
+            this.AgregarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AgregarButton.UseVisualStyleBackColor = true;
             // 
             // ProyectoDetalleDataGridView
@@ -153,7 +160,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // TiempoTextBox
             // 
-            this.TiempoTextBox.Location = new System.Drawing.Point(369, 43);
+            this.TiempoTextBox.Location = new System.Drawing.Point(393, 43);
             this.TiempoTextBox.Name = "TiempoTextBox";
             this.TiempoTextBox.Size = new System.Drawing.Size(125, 23);
             this.TiempoTextBox.TabIndex = 5;
@@ -161,7 +168,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // TiempoLabel
             // 
             this.TiempoLabel.AutoSize = true;
-            this.TiempoLabel.Location = new System.Drawing.Point(367, 23);
+            this.TiempoLabel.Location = new System.Drawing.Point(391, 22);
             this.TiempoLabel.Name = "TiempoLabel";
             this.TiempoLabel.Size = new System.Drawing.Size(102, 15);
             this.TiempoLabel.TabIndex = 4;
@@ -169,7 +176,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // RequerimientoTextBox
             // 
-            this.RequerimientoTextBox.Location = new System.Drawing.Point(138, 44);
+            this.RequerimientoTextBox.Location = new System.Drawing.Point(160, 43);
             this.RequerimientoTextBox.Name = "RequerimientoTextBox";
             this.RequerimientoTextBox.Size = new System.Drawing.Size(225, 23);
             this.RequerimientoTextBox.TabIndex = 3;
@@ -177,7 +184,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // RequerimientoLabel
             // 
             this.RequerimientoLabel.AutoSize = true;
-            this.RequerimientoLabel.Location = new System.Drawing.Point(136, 23);
+            this.RequerimientoLabel.Location = new System.Drawing.Point(158, 22);
             this.RequerimientoLabel.Name = "RequerimientoLabel";
             this.RequerimientoLabel.Size = new System.Drawing.Size(152, 15);
             this.RequerimientoLabel.TabIndex = 2;
@@ -188,13 +195,13 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.TipoTareaComboBox.FormattingEnabled = true;
             this.TipoTareaComboBox.Location = new System.Drawing.Point(7, 43);
             this.TipoTareaComboBox.Name = "TipoTareaComboBox";
-            this.TipoTareaComboBox.Size = new System.Drawing.Size(125, 23);
+            this.TipoTareaComboBox.Size = new System.Drawing.Size(147, 23);
             this.TipoTareaComboBox.TabIndex = 1;
             // 
             // TipoTareaLabel
             // 
             this.TipoTareaLabel.AutoSize = true;
-            this.TipoTareaLabel.Location = new System.Drawing.Point(5, 23);
+            this.TipoTareaLabel.Location = new System.Drawing.Point(5, 22);
             this.TipoTareaLabel.Name = "TipoTareaLabel";
             this.TipoTareaLabel.Size = new System.Drawing.Size(77, 15);
             this.TipoTareaLabel.TabIndex = 0;
@@ -202,29 +209,38 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // NuevoButton
             // 
+            this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
+            this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.NuevoButton.Location = new System.Drawing.Point(12, 471);
             this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(75, 56);
+            this.NuevoButton.Size = new System.Drawing.Size(75, 52);
             this.NuevoButton.TabIndex = 7;
             this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.NuevoButton.UseVisualStyleBackColor = true;
             // 
             // EliminarButton
             // 
+            this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
+            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.EliminarButton.Location = new System.Drawing.Point(174, 471);
             this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(75, 56);
+            this.EliminarButton.Size = new System.Drawing.Size(75, 52);
             this.EliminarButton.TabIndex = 8;
             this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.EliminarButton.UseVisualStyleBackColor = true;
             // 
             // GuardarButton
             // 
+            this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
+            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.GuardarButton.Location = new System.Drawing.Point(93, 471);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(75, 56);
+            this.GuardarButton.Size = new System.Drawing.Size(75, 52);
             this.GuardarButton.TabIndex = 9;
             this.GuardarButton.Text = "Buscar";
+            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.GuardarButton.UseVisualStyleBackColor = true;
             // 
             // TiempoTotalTextBox
@@ -253,11 +269,14 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // BuscarButton
             // 
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
+            this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarButton.Location = new System.Drawing.Point(126, 32);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(85, 23);
+            this.BuscarButton.Size = new System.Drawing.Size(69, 23);
             this.BuscarButton.TabIndex = 13;
             this.BuscarButton.Text = "Buscar";
+            this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BuscarButton.UseVisualStyleBackColor = true;
             // 
             // MyErrorProvider
@@ -268,7 +287,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 535);
+            this.ClientSize = new System.Drawing.Size(633, 538);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.ProyectoIdNumericUpDown);
             this.Controls.Add(this.TiempoTotalLabel);
@@ -282,6 +301,9 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.Controls.Add(this.FechaLabel);
             this.Controls.Add(this.FechaDateTimePicker);
             this.Controls.Add(this.ProyectoIdLabel);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(649, 577);
+            this.MinimumSize = new System.Drawing.Size(649, 577);
             this.Name = "ProyectoForm";
             this.Text = "Registro De Proyectos";
             this.Load += new System.EventHandler(this.ProyectoForm_Load);
