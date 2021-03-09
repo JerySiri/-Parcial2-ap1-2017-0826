@@ -37,7 +37,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.ProyectoDetalleGroupBox = new System.Windows.Forms.GroupBox();
             this.RemoverButton = new System.Windows.Forms.Button();
             this.AgregarButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProyectoDetalleDataGridView = new System.Windows.Forms.DataGridView();
             this.TiempoTextBox = new System.Windows.Forms.TextBox();
             this.TiempoLabel = new System.Windows.Forms.Label();
             this.RequerimientoTextBox = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.ProyectoIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.ProyectoDetalleGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +103,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             this.ProyectoDetalleGroupBox.Controls.Add(this.RemoverButton);
             this.ProyectoDetalleGroupBox.Controls.Add(this.AgregarButton);
-            this.ProyectoDetalleGroupBox.Controls.Add(this.dataGridView1);
+            this.ProyectoDetalleGroupBox.Controls.Add(this.ProyectoDetalleDataGridView);
             this.ProyectoDetalleGroupBox.Controls.Add(this.TiempoTextBox);
             this.ProyectoDetalleGroupBox.Controls.Add(this.TiempoLabel);
             this.ProyectoDetalleGroupBox.Controls.Add(this.RequerimientoTextBox);
@@ -135,18 +135,18 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.AgregarButton.Text = "Agregar";
             this.AgregarButton.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // ProyectoDetalleDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(598, 150);
-            this.dataGridView1.TabIndex = 6;
+            this.ProyectoDetalleDataGridView.AllowUserToAddRows = false;
+            this.ProyectoDetalleDataGridView.AllowUserToDeleteRows = false;
+            this.ProyectoDetalleDataGridView.AllowUserToOrderColumns = true;
+            this.ProyectoDetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProyectoDetalleDataGridView.Location = new System.Drawing.Point(7, 72);
+            this.ProyectoDetalleDataGridView.Name = "ProyectoDetalleDataGridView";
+            this.ProyectoDetalleDataGridView.ReadOnly = true;
+            this.ProyectoDetalleDataGridView.RowTemplate.Height = 25;
+            this.ProyectoDetalleDataGridView.Size = new System.Drawing.Size(598, 150);
+            this.ProyectoDetalleDataGridView.TabIndex = 6;
             // 
             // TiempoTextBox
             // 
@@ -279,7 +279,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.Text = "Registro De Proyectos";
             this.ProyectoDetalleGroupBox.ResumeLayout(false);
             this.ProyectoDetalleGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -295,7 +295,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
         private System.Windows.Forms.TextBox DescripcionTextBox;
         private System.Windows.Forms.GroupBox ProyectoDetalleGroupBox;
         private System.Windows.Forms.Button AgregarButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ProyectoDetalleDataGridView;
         private System.Windows.Forms.TextBox TiempoTextBox;
         private System.Windows.Forms.Label TiempoLabel;
         private System.Windows.Forms.TextBox RequerimientoTextBox;
