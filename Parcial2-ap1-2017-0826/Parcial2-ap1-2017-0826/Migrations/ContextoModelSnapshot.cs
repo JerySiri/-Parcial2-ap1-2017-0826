@@ -48,8 +48,8 @@ namespace Parcial2_ap1_2017_0826.Migrations
                     b.Property<int>("ProyectoId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("TipoTareaId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("TipoTareaId")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

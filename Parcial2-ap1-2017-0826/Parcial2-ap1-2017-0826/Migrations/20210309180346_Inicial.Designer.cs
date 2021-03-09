@@ -9,8 +9,8 @@ using Parcial2_ap1_2017_0826.DAL;
 namespace Parcial2_ap1_2017_0826.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210309001037_inicial")]
-    partial class inicial
+    [Migration("20210309180346_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,8 +50,8 @@ namespace Parcial2_ap1_2017_0826.Migrations
                     b.Property<int>("ProyectoId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("TipoTareaId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("TipoTareaId")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

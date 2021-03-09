@@ -30,5 +30,27 @@ namespace Parcial2_ap1_2017_0826.BLL
 
             return lista;
         }
+
+        public static TiposTarea Buscar(int id)
+        {
+            TiposTarea tipoTarea = new TiposTarea();
+            Contexto contexto = new Contexto();
+
+            try
+            {
+                tipoTarea = contexto.TiposTarea.Find(id);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return tipoTarea;
+        }
+
     }
 }

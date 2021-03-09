@@ -87,7 +87,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
                 (
                     id: 0,
                     proyectoId: (int)ProyectoIdNumericUpDown.Value,
-                    tipoTareaId: (int)TipoTareaComboBox.SelectedIndex + 1,
+                    tipoTareaId: TiposTareaBLL.Buscar((int)TipoTareaComboBox.SelectedIndex + 1).Nombre,
                     descripcion: RequerimientoTextBox.Text,
                     minutos: Utilidades.ToInt(TiempoTextBox.Text)
                 )
