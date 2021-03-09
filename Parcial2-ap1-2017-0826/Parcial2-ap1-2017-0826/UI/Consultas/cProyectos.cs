@@ -33,6 +33,10 @@ namespace Parcial2_ap1_2017_0826.UI.Consultas
                     case 1: // descripcion
                         lista = ProyectosBLL.GetList(p => p.Descripcion.Contains(CriterioTextBox.Text));
                         break;
+
+                    case 3: // descripcion
+                        lista = ProyectosBLL.GetList(p => true);
+                        break;
                 }
 
             }

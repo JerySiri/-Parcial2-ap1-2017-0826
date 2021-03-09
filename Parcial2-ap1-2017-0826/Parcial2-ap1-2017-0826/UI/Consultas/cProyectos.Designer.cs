@@ -53,7 +53,8 @@ namespace Parcial2_ap1_2017_0826.UI.Consultas
             this.FiltroComboBox.FormattingEnabled = true;
             this.FiltroComboBox.Items.AddRange(new object[] {
             "Id",
-            "Descripcion"});
+            "Descripcion",
+            "Todo"});
             this.FiltroComboBox.Location = new System.Drawing.Point(13, 31);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(135, 23);
