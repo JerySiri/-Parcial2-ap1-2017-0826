@@ -20,6 +20,94 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             InitializeComponent();
             this.Detalle = new List<ProyectosDetalle>();
         }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            Proyectos proyectos = ProyectosBLL.Buscar((int)ProyectoIdNumericUpDown.Value);
+
+            if (proyectos != null)
+            {
+                LlenarCampos(proyectos);
+                CargarGrid();
+            }
+            else
+                MessageBox.Show("Usuario No existe.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void GuardarButton_Click(object sender, EventArgs e)
+        {
+            Proyectos proyectos;
+
+            if (!Validar())
+                return;
+
+            proyectos = LLenarClase();
+
+            bool paso = ProyectosBLL.Guardar(proyectos);
+
+            if (paso)
+            {
+                Limpiar();
+                MessageBox.Show("Transsaccion exitosa!.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Transsaccion fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+
+            if (ProyectosBLL.Eliminar((int)ProyectoIdNumericUpDown.Value))
+            {
+                Limpiar();
+                MessageBox.Show("Eliminacion de usuario exitosa!.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Eliminacion de usuario fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AgregarButton_Click(object sender, EventArgs e)
+        {
+            if (!ValidarAgregar())
+                return;
+
+            if (ProyectoDetalleDataGridView.DataSource != null)
+                this.Detalle = (List<ProyectosDetalle>)ProyectoDetalleDataGridView.DataSource;
+
+            this.Detalle.Add(new ProyectosDetalle
+                (
+                    id: 0,
+                    proyectoId: (int)ProyectoIdNumericUpDown.Value,
+                    tipoTareaId: (int)TipoTareaComboBox.SelectedIndex + 1,
+                    descripcion: RequerimientoTextBox.Text,
+                    minutos: Convert.ToInt32(TiempoTextBox.Text)
+                )
+           );
+
+            TiempoTotalTextBox.Text = LLenarTiempoTotal().ToString();
+
+            CargarGrid();
+        }
+
+        private void RemoverButton_Click(object sender, EventArgs e)
+        {
+            if (ProyectoDetalleDataGridView.Rows.Count > 0 || ProyectoDetalleDataGridView.CurrentRow != null)
+            {
+                Detalle.RemoveAt(ProyectoDetalleDataGridView.CurrentRow.Index);
+                TiempoTotalTextBox.Text = LLenarTiempoTotal().ToString();
+                CargarGrid();
+            }
+        }
+
         private void Limpiar()
         {
             // Proyecto
@@ -60,7 +148,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             ProyectoIdNumericUpDown.Value = proyectos.ProyectoId;
             FechaDateTimePicker.Value = proyectos.Fecha;
             DescripcionTextBox.Text = proyectos.Descripcion;
-
+            TiempoTotalTextBox.Text = LLenarTiempoTotal().ToString();
             this.Detalle = proyectos.ProyectoDetalle;
         }
         private bool ValidarAgregar()
@@ -136,91 +224,5 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             TipoTareaComboBox.ValueMember = "TareaId";
         }
         
-        private void BuscarButton_Click(object sender, EventArgs e)
-        {
-            Proyectos proyectos = ProyectosBLL.Buscar((int)ProyectoIdNumericUpDown.Value);
-
-            if (proyectos != null)
-            {
-                LlenarCampos(proyectos);
-                CargarGrid();
-            }
-            else
-                MessageBox.Show("Usuario No existe.", "Fallo", MessageBoxButtons.OK,MessageBoxIcon.Error);
-        }
-        
-        private void NuevoButton_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-        
-        private void GuardarButton_Click(object sender, EventArgs e)
-        {
-            Proyectos proyectos;
-
-            if (!Validar())
-                return;
-
-            proyectos = LLenarClase();
-
-            bool paso = ProyectosBLL.Guardar(proyectos);
-
-            if (paso)
-            {
-                Limpiar();
-                MessageBox.Show("Transsaccion exitosa!.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Transsaccion fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void EliminarButton_Click(object sender, EventArgs e)
-        {
-
-            if (ProyectosBLL.Eliminar((int)ProyectoIdNumericUpDown.Value))
-            {
-                Limpiar();
-                MessageBox.Show("Eliminacion de usuario exitosa!.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Eliminacion de usuario fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        
-        private void AgregarButton_Click(object sender, EventArgs e)
-        {
-            if (! ValidarAgregar())
-                return;
-
-            if (ProyectoDetalleDataGridView.DataSource != null)
-                this.Detalle = (List<ProyectosDetalle>)ProyectoDetalleDataGridView.DataSource;
-
-            this.Detalle.Add(new ProyectosDetalle
-                (
-                    id: 0,
-                    proyectoId: (int)ProyectoIdNumericUpDown.Value,
-                    tipoTareaId: (int)TipoTareaComboBox.SelectedIndex + 1,
-                    descripcion: RequerimientoTextBox.Text,
-                    minutos: Convert.ToInt32(TiempoTextBox.Text)
-                )
-           ) ;
-
-            TiempoTotalTextBox.Text = LLenarTiempoTotal().ToString() ;
-
-            CargarGrid();
-        }
-        
-        private void RemoverButton_Click(object sender, EventArgs e)
-        {
-            if (ProyectoDetalleDataGridView.Rows.Count > 0 || ProyectoDetalleDataGridView.CurrentRow != null)
-            {
-                Detalle.RemoveAt(ProyectoDetalleDataGridView.CurrentRow.Index);
-                TiempoTotalTextBox.Text =LLenarTiempoTotal().ToString();
-                CargarGrid();
-            }
-        }
     }
 }
