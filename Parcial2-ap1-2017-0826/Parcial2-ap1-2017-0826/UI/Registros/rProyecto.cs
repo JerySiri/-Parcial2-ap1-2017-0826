@@ -88,9 +88,9 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
                     proyectoId: (int)ProyectoIdNumericUpDown.Value,
                     tipoTareaId: (int)TipoTareaComboBox.SelectedIndex + 1,
                     descripcion: RequerimientoTextBox.Text,
-                    minutos: Convert.ToInt32(TiempoTextBox.Text)
+                    minutos: Utilidades.ToInt(TiempoTextBox.Text)
                 )
-           );
+           ) ;
 
             TiempoTotalTextBox.Text = LLenarTiempoTotal().ToString();
 
@@ -170,7 +170,15 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
                 TiempoTextBox.Focus();
                 paso = false;
             }
-            
+
+            if (Utilidades.esToInt(TiempoTextBox.Text))
+            {
+                MyErrorProvider.SetError(TiempoTextBox, "El campo debe ser numerico");
+                TiempoTextBox.Focus();
+                paso = false;
+            }
+
+
             return paso;
         }
 
