@@ -157,8 +157,6 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            if (!Validar())
-                return;
 
             if (ProyectosBLL.Eliminar((int)ProyectoIdNumericUpDown.Value))
             {
@@ -169,6 +167,23 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             {
                 MessageBox.Show("Eliminacion de usuario fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void AgregarButton_Click(object sender, EventArgs e)
+        {
+            if (ProyectoDetalleDataGridView.DataSource != Null)
+                this.Detalle = (List<ProyectosDetalle>)ProyectoDetalleDataGridView.DataSource;
+
+            this.Detalle.Add(new ProyectosDetalle
+                (
+                    id: 0,
+                    proyectoId: (int)ProyectoIdNumericUpDown.Value,
+                    tipoTareaId: (int)TipoTareaComboBox.SelectedIndex + 1,
+                    descripcion: RequerimientoTextBox.Text,
+                    TiempoTextBox: TiempoTextBox.Text
+                )
+           );
+            CargarGrid();
         }
     }
 }
