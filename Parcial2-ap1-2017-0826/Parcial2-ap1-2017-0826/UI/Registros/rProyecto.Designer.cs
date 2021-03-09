@@ -150,7 +150,6 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.ProyectoDetalleDataGridView.RowTemplate.Height = 25;
             this.ProyectoDetalleDataGridView.Size = new System.Drawing.Size(598, 150);
             this.ProyectoDetalleDataGridView.TabIndex = 6;
-            this.ProyectoDetalleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProyectoDetalleDataGridView_CellContentClick);
             // 
             // TiempoTextBox
             // 
@@ -285,6 +284,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.Controls.Add(this.ProyectoIdLabel);
             this.Name = "ProyectoForm";
             this.Text = "Registro De Proyectos";
+            this.Load += new System.EventHandler(this.ProyectoForm_Load);
             this.ProyectoDetalleGroupBox.ResumeLayout(false);
             this.ProyectoDetalleGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).EndInit();
