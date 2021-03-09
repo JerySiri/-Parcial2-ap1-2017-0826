@@ -51,6 +51,9 @@ namespace Parcial2_ap1_2017_0826.UI.Consultas
             // FiltroComboBox
             // 
             this.FiltroComboBox.FormattingEnabled = true;
+            this.FiltroComboBox.Items.AddRange(new object[] {
+            "Id",
+            "Descripcion"});
             this.FiltroComboBox.Location = new System.Drawing.Point(13, 31);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(135, 23);
@@ -86,6 +89,7 @@ namespace Parcial2_ap1_2017_0826.UI.Consultas
             this.BucarButton.Text = "Buscar         ";
             this.BucarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BucarButton.UseVisualStyleBackColor = true;
+            this.BucarButton.Click += new System.EventHandler(this.BucarButton_Click);
             // 
             // ConsultaDataGridView
             // 

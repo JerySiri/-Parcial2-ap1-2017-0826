@@ -32,13 +32,16 @@ namespace Parcial2_ap1_2017_0826.UI
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.RegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rProyectosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cProyectosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RegistrosToolStripMenuItem});
+            this.RegistrosToolStripMenuItem,
+            this.ConsultasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -58,6 +61,20 @@ namespace Parcial2_ap1_2017_0826.UI
             this.rProyectosToolStripMenuItem1.Name = "rProyectosToolStripMenuItem1";
             this.rProyectosToolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
             this.rProyectosToolStripMenuItem1.Text = "&Registro De Proyectos ";
+            // 
+            // ConsultasToolStripMenuItem
+            // 
+            this.ConsultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cProyectosToolStripMenuItem1});
+            this.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem";
+            this.ConsultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.ConsultasToolStripMenuItem.Text = "&Consultas";
+            // 
+            // cProyectosToolStripMenuItem1
+            // 
+            this.cProyectosToolStripMenuItem1.Name = "cProyectosToolStripMenuItem1";
+            this.cProyectosToolStripMenuItem1.Size = new System.Drawing.Size(193, 22);
+            this.cProyectosToolStripMenuItem1.Text = "Consulta De Proyectos";
             // 
             // MenuMain
             // 
@@ -80,6 +97,8 @@ namespace Parcial2_ap1_2017_0826.UI
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem RegistrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rProyectosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ConsultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cProyectosToolStripMenuItem1;
     }
 }
 
