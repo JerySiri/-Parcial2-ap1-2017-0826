@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Parcial2_ap1_2017_0826
+namespace Parcial2_ap1_2017_0826.UI.Registros
 {
-    public partial class Form1 : Form
+    public partial class ProyectoForm : Form
     {
-        public Form1()
+        public ProyectoForm()
         {
             InitializeComponent();
         }
-
     }
 }
