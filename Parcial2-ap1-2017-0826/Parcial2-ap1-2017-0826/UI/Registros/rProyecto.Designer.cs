@@ -132,6 +132,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             this.RemoverButton.Text = "Eliminar";
             this.RemoverButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.RemoverButton.UseVisualStyleBackColor = true;
+            this.RemoverButton.Click += new System.EventHandler(this.RemoverButton_Click);
             // 
             // AgregarButton
             // 

@@ -185,5 +185,14 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
            );
             CargarGrid();
         }
+
+        private void RemoverButton_Click(object sender, EventArgs e)
+        {
+            if (ProyectoDetalleDataGridView.Rows.Count > 0 || ProyectoDetalleDataGridView.CurrentRow != Null)
+            {
+                Detalle.RemoveAt(ProyectoDetalleDataGridView.CurrentRow.Index);
+                CargarGrid();
+            }
+        }
     }
 }
