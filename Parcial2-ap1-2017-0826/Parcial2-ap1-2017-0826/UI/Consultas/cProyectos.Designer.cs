@@ -29,13 +29,13 @@ namespace Parcial2_ap1_2017_0826.UI.Consultas
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cProyectoForm));
             this.FiltroLabel = new System.Windows.Forms.Label();
             this.FiltroComboBox = new System.Windows.Forms.ComboBox();
             this.CriterioLabel = new System.Windows.Forms.Label();
             this.CriterioTextBox = new System.Windows.Forms.TextBox();
             this.BucarButton = new System.Windows.Forms.Button();
             this.ConsultaDataGridView = new System.Windows.Forms.DataGridView();
+            this.VerColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +81,7 @@ namespace Parcial2_ap1_2017_0826.UI.Consultas
             // BucarButton
             // 
             this.BucarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BucarButton.Image = ((System.Drawing.Image)(resources.GetObject("BucarButton.Image")));
+            this.BucarButton.Image = global::Parcial2_ap1_2017_0826.Properties.Resources.Buscar_Button;
             this.BucarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BucarButton.Location = new System.Drawing.Point(437, 30);
             this.BucarButton.Name = "BucarButton";
@@ -101,12 +101,22 @@ namespace Parcial2_ap1_2017_0826.UI.Consultas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConsultaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.VerColumn});
             this.ConsultaDataGridView.Location = new System.Drawing.Point(12, 61);
             this.ConsultaDataGridView.Name = "ConsultaDataGridView";
             this.ConsultaDataGridView.ReadOnly = true;
             this.ConsultaDataGridView.RowTemplate.Height = 25;
             this.ConsultaDataGridView.Size = new System.Drawing.Size(541, 165);
             this.ConsultaDataGridView.TabIndex = 5;
+            this.ConsultaDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConsultaDataGridView_CellClick);
+            // 
+            // VerColumn
+            // 
+            this.VerColumn.HeaderText = "";
+            this.VerColumn.Name = "VerColumn";
+            this.VerColumn.ReadOnly = true;
+            this.VerColumn.Width = 40;
             // 
             // cProyectoForm
             // 
@@ -136,5 +146,6 @@ namespace Parcial2_ap1_2017_0826.UI.Consultas
         private System.Windows.Forms.TextBox CriterioTextBox;
         private System.Windows.Forms.Button BucarButton;
         private System.Windows.Forms.DataGridView ConsultaDataGridView;
+        private System.Windows.Forms.DataGridViewButtonColumn VerColumn;
     }
 }

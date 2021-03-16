@@ -58,7 +58,14 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             {
                 MessageBox.Show("Transsaccion fallida.", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             CargarGrid();
+
+            // toma el ProyectoId y se lo asigna  a ProyectoIdNumericUpDown
+            if ((int)ProyectoIdNumericUpDown.Value == 0)
+            {
+               ProyectoIdNumericUpDown.Value = Detalle.First().ProyectoId;
+            }
         }
 
         private void EliminarButton_Click(object sender, EventArgs e)
@@ -116,7 +123,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
         {
             // Proyecto
             ProyectoIdNumericUpDown.Value = 0;
-            FechaDateTimePicker.Value = DateTime.Now;
+            FechaDateTimePicker.Value = DateTime.Now.Date;
             DescripcionTextBox.Clear();
 
             //DetalleProyecto
@@ -129,7 +136,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             CargarGrid();
             
         }
-        private void CargarGrid()
+        public void CargarGrid()
         {
             ProyectoDetalleDataGridView.DataSource = null;
             ProyectoDetalleDataGridView.DataSource = this.Detalle;
@@ -147,7 +154,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             return proyectos;
         }
 
-        private void LlenarCampos(Proyectos proyectos)
+        public void LlenarCampos(Proyectos proyectos)
         {
             ProyectoIdNumericUpDown.Value = proyectos.ProyectoId;
             FechaDateTimePicker.Value = proyectos.Fecha;
@@ -199,14 +206,14 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
                 DescripcionTextBox.Focus();
                 paso = false;
             }
-
+            /*
             if (ProyectoIdNumericUpDown.Value == 0)
             {
                 MyErrorProvider.SetError(ProyectoIdNumericUpDown, "El campo id No puede estar con valor 0");
                 ProyectoIdNumericUpDown.Focus();
                 paso = false;
             }
-
+            */
             if (this.Detalle.Count == 0)
             {
                 MyErrorProvider.SetError(ProyectoDetalleGroupBox, "Debe agregar una tarea a realizar");

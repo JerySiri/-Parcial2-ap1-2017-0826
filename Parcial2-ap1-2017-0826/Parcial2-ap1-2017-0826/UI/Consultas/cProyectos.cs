@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Parcial2_ap1_2017_0826.Entidades;
 using Parcial2_ap1_2017_0826.BLL;
+using Parcial2_ap1_2017_0826.UI.Registros;
+using Parcial2_ap1_2017_0826.BLL;
 
 namespace Parcial2_ap1_2017_0826.UI.Consultas
 {
@@ -44,7 +46,29 @@ namespace Parcial2_ap1_2017_0826.UI.Consultas
                 lista = ProyectosBLL.GetList(p => true);
 
             ConsultaDataGridView.DataSource = null;
+            VerColumn.Text = "Ver";
+            VerColumn.UseColumnTextForButtonValue = true;
             ConsultaDataGridView.DataSource = lista;
         }
+
+        private void ConsultaDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (ConsultaDataGridView.CurrentCell.ColumnIndex == 0)
+            {
+                abrirRegistroProyecto();
+                BucarButton_Click(sender,e);
+            }
+        }
+
+        private void abrirRegistroProyecto()
+        {
+            var rProyecto = new ProyectoForm();
+            var row = ConsultaDataGridView.CurrentRow;
+            rProyecto.LlenarCampos(ProyectosBLL.Buscar((int)row.Cells[1].Value));
+            rProyecto.CargarGrid();
+            rProyecto.ShowDialog();
+        }
+
+
     }
 }

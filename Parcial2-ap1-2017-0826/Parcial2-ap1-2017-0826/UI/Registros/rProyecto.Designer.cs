@@ -30,7 +30,6 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProyectoForm));
             this.ProyectoIdLabel = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FechaLabel = new System.Windows.Forms.Label();
@@ -123,7 +122,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // RemoverButton
             // 
-            this.RemoverButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoverButton.Image")));
+            this.RemoverButton.Image = global::Parcial2_ap1_2017_0826.Properties.Resources.Remover_16;
             this.RemoverButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RemoverButton.Location = new System.Drawing.Point(6, 228);
             this.RemoverButton.Name = "RemoverButton";
@@ -136,7 +135,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // AgregarButton
             // 
-            this.AgregarButton.Image = ((System.Drawing.Image)(resources.GetObject("AgregarButton.Image")));
+            this.AgregarButton.Image = global::Parcial2_ap1_2017_0826.Properties.Resources.Agregar_16;
             this.AgregarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AgregarButton.Location = new System.Drawing.Point(524, 42);
             this.AgregarButton.Name = "AgregarButton";
@@ -211,7 +210,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
+            this.NuevoButton.Image = global::Parcial2_ap1_2017_0826.Properties.Resources.EditarButton;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.NuevoButton.Location = new System.Drawing.Point(12, 471);
             this.NuevoButton.Name = "NuevoButton";
@@ -224,7 +223,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
+            this.EliminarButton.Image = global::Parcial2_ap1_2017_0826.Properties.Resources.EliminarButton;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.EliminarButton.Location = new System.Drawing.Point(174, 471);
             this.EliminarButton.Name = "EliminarButton";
@@ -237,7 +236,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
+            this.GuardarButton.Image = global::Parcial2_ap1_2017_0826.Properties.Resources.GuardarButton;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.GuardarButton.Location = new System.Drawing.Point(93, 471);
             this.GuardarButton.Name = "GuardarButton";
@@ -274,7 +273,7 @@ namespace Parcial2_ap1_2017_0826.UI.Registros
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
+            this.BuscarButton.Image = global::Parcial2_ap1_2017_0826.Properties.Resources.Buscar_Button;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarButton.Location = new System.Drawing.Point(126, 32);
             this.BuscarButton.Name = "BuscarButton";

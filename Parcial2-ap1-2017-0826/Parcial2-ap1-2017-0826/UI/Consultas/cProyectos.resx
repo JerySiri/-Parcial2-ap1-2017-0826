@@ -57,15 +57,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
-  <data name="BucarButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAPRJREFUOE+d0b8rBnEcwPEjSiQRq5KSSSaDhcVgEYOURIoU5ddi8mNTBkrZlTLI
-        qKSUkfIHWIwGWWVSeH3u7imDe3i869Xz/V7d5+57T5LXzjKzTDPDCH+qlQ3WOOeUGBJDF/m1JeLJPVTR
-        xiZXdDBO2RaoIW7+3gR7zKe7Mm3nv4PEuj7dZR0yly2LO2E0WyZD7NOU7pKkj5VsWdwlcdMktXEhL460
-        yjp1caGoTl64Zocp4m+MD3nDE1v0U1gXt3zyziv37HLHGx8c0MCPxSt3M0wv1UTNnBHDwyMDVNwYz5QG
-        HdFIRbVwTGnIA/8qjukoycUXzYks8NfeL5AAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="VerColumn.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
 </root>
